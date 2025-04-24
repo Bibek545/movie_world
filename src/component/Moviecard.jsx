@@ -4,15 +4,15 @@ const Moviecard = () => {
   return (
     <>
     <div className='moviecard'>
-      <img src=''/>
+      <div className='card-moviecard'>
+      <img src='./src/src-img/image.png'/>
       <div className='card-container'>
-        <h6>Name</h6>
-        <h6>IMDB rating</h6>
-        <h6>1996</h6>
+        <h3>Name: Man Of Steel</h3>
+        <h3>IMDB rating: 9.7</h3>
+        <h3>Year: 2013</h3>
 
       </div>
-
-
+      </div>
     </div>
     
     </>

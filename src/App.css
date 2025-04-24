@@ -17,13 +17,24 @@ display: 100vw;
   position: sticky;
 }
 
+.navbar h3 {
+  text-align: center;
+  position: sticky;
+}
 
 /* this is for the hero */
 .hero {
   height: 600px;
+  padding-top:40px;
   /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
+.hero-container {
+  padding: 15px;
+}
 .display {
   height: 600px;
   background-color: yellow;
@@ -31,7 +42,24 @@ display: 100vw;
 
 .moviecard {
   height: 300px;
-  width: 300px;
-  background-color: red;
+  width: 350px;
+  /* background-color: red; */
+  /* display: flex; */
+  /* justify-content: center; */
+  border: 1px solid black;
+}
+.card-moviecard {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 20px;
+
+}
+.card-container {
+  border: 1px sold black;
+}
+
+.moviecard img {
+  height: 250px;
+  width: auto;
 
 }

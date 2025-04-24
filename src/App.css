@@ -1,0 +1,37 @@
+body {
+
+}
+.wrapper {
+
+height: 100vh;
+display: 100vw;
+}
+/* this is for nav bar */
+.navbar {
+ position: relative;
+  height: 50px;
+  
+}
+.navbar h1 {
+  text-align: center;
+  position: sticky;
+}
+
+
+/* this is for the hero */
+.hero {
+  height: 600px;
+  /* background-color: red; */
+}
+
+.display {
+  height: 600px;
+  background-color: yellow;
+}
+
+.moviecard {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+
+}

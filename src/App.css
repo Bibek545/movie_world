@@ -35,6 +35,25 @@ display: 100vw;
 .hero-container {
   padding: 15px;
 }
+.hero-container h3 {
+ padding-bottom: 2px;
+}
+
+.hero-container .btn-input {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.hero-container  .input-name {
+    width: 300px;
+    height: 40px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
 .display {
   height: 600px;
   background-color: yellow;
@@ -43,15 +62,17 @@ display: 100vw;
 .moviecard {
   height: 300px;
   width: 350px;
+  
   /* background-color: red; */
   /* display: flex; */
   /* justify-content: center; */
   border: 1px solid black;
 }
+.moviecard img {}
 .card-moviecard {
   display: flex;
   /* justify-content: space-around; */
-  gap: 20px;
+
 
 }
 .card-container {

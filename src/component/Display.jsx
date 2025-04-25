@@ -5,7 +5,6 @@ const Display = () => {
    <>
    <div className='display'>
       display
-   
     </div>
     <hr />
    </> 

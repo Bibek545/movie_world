@@ -6,9 +6,10 @@ const Hero = () => {
 
     const handleInputChange = (e) => {
       setInputValue(e.target.value);
-      console.log(e.target.value); 
+      // console.log(e.target.value); 
     }
   //  console.log(setInputValue());
+  
   return (
     <>
   
@@ -20,7 +21,7 @@ const Hero = () => {
       <button className='btn-search'>Search</button>
       
       </div>
-      {/* <p> You typed : <strong> {inputValue}</strong> </p> */}
+      <p> You typed : <strong> {inputValue}</strong> </p>
       <Moviecard />
       </div>
       {/* npm axious look up

@@ -72,9 +72,26 @@ display: 100vw;
 .card-moviecard {
   display: flex;
   /* justify-content: space-around; */
-
-
 }
+/* this is for the movie card */
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+.movie-detail {
+  padding: 5px;
+}
+
+
+/* this is for the movie card */
 .card-container {
   border: 1px sold black;
 }

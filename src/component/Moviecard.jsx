@@ -1,19 +1,56 @@
 import React from 'react'
 
-const Moviecard = () => {
-  return (
+const Moviecard = ({poster, title,imdbID, imdbRating, summary,SetMovieList,genre, search = false}) => {
+
+  const handleOnClick = (genre) => {
+    const localMovieData = localStorage.getItem("movie-data");
+    const movieList = JSON.parse(localMovieData) || [];
+
+    const movieObject = {
+      imdbID, 
+      title,
+      poster,
+      imdbRating,
+      summary,
+      genre,
+    };
+    movieList.push(movieObject);
+    localStorage.setItem("movie-data", JSON.stringify(movieList));
+    SetMovieList(movieList);
+  };
+   const handleOnDelete = () => {
+    const localData = localStorage.getItem("movie-data");
+    const temMovieList = JSON.parse(localData);
+
+    const updatedMovieList = tempMovieList.filter((movie) => movie.imdbID !== id);
+    localStorage.setItem("movie-data", JSON.stringify(updatedMovieList));
+    SetMovieList(updatedMovieList);
+   }
+  return ( 
     <>
-    <div className='moviecard'>
-      <div className='card-moviecard'>
-      <img src='./src/src-img/image.png'/>
-      <div className='card-container'>
-        <h3>Name: Man Of Steel</h3>
-        <h3>IMDB rating: 9.7</h3>
-        <h3>Year: 2013</h3>
+    <div className="movie-card">
+      <img className="movie-poster" src={poster} alt="Movie Poster"/>
+      <div className="movie-detail">
+        <div className="movie-title">{title}</div>
+        <div className="movie-rating">{imdbRating}</div>
+        <div className="movie-summary">{summary}</div>
 
       </div>
       </div>
-    </div>
+      
+      { search ? (
+        <>
+        <button onClick={() => handleOnClick("Drama")}>Drama</button>
+        <button onClick={() => handleOnClick("Action")}>Action</button>
+        </>
+
+      ) : (
+        <>
+        Genre : {genre}
+        <button onClick={() => handleOnClick(imdbID)}>Delete</button>
+        </>
+      )
+      }
     
     </>
   )

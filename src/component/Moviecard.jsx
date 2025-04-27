@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Moviecard = ({poster, title,imdbID, imdbRating, summary,SetMovieList,genre, search = false}) => {
+const Moviecard = ({poster, title,imdbID, imdbRating, summary,setMovieList,genre, search = false}) => {
 
   const handleOnClick = (genre) => {
     const localMovieData = localStorage.getItem("movie-data");
@@ -16,15 +16,15 @@ const Moviecard = ({poster, title,imdbID, imdbRating, summary,SetMovieList,genre
     };
     movieList.push(movieObject);
     localStorage.setItem("movie-data", JSON.stringify(movieList));
-    SetMovieList(movieList);
+    setMovieList(movieList);
   };
-   const handleOnDelete = () => {
+   const handleOnDelete = (id) => {
     const localData = localStorage.getItem("movie-data");
-    const temMovieList = JSON.parse(localData);
+    const tempMovieList = JSON.parse(localData);
 
     const updatedMovieList = tempMovieList.filter((movie) => movie.imdbID !== id);
     localStorage.setItem("movie-data", JSON.stringify(updatedMovieList));
-    SetMovieList(updatedMovieList);
+    setMovieList(updatedMovieList);
    }
   return ( 
     <>
@@ -47,7 +47,7 @@ const Moviecard = ({poster, title,imdbID, imdbRating, summary,SetMovieList,genre
       ) : (
         <>
         Genre : {genre}
-        <button onClick={() => handleOnClick(imdbID)}>Delete</button>
+        <button onClick={() => handleOnDelete(imdbID)}>Delete</button>
         </>
       )
       }
